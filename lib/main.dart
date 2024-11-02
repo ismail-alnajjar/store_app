@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:store_app/screens/UpdateProduct.dart';
+import 'package:store_app/screens/homePage.dart';
+
+void main() {
+  runApp(const StoreApp());
+}
+
+class StoreApp extends StatelessWidget {
+  const StoreApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      routes: {
+        HomePage.id: (context) => const HomePage(),
+        UpdateProductPage.id: (context) => UpdateProductPage(),
+      },
+      initialRoute: HomePage.id,
+      debugShowCheckedModeBanner: false,
+      home: const HomePage(),
+    );
+  }
+}
